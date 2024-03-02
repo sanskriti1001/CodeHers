@@ -1,2 +1,3 @@
 # CodeHers
-Hack N win github of CodeHers
+Hack N win Hackathon
+github of CodeHers
