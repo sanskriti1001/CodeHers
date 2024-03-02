@@ -1,7 +1,7 @@
 # CodeHers
 Hack N win Hackathon
 <br>
-github of CodeHers
+Github of CodeHers
 <br>
 Author - Sanskriti, Harvani and Suhani
 <br>
