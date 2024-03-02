@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="png" href="../images/icon/favicon.png">
+	<title>Computer Science Courses on Study Smart</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+        body {
+            margin: 0;
+        }
+
+        .video-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 300px;
+            height: 50vh; /* Half of the screen height */
+            background: rgba(140, 184, 254, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            z-index: 999; /* Set a high z-index value to keep it on top */
+        }
+
+        #player,
+        #note-input {
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        #save-note {
+            width: 100%;
+        }
+
+        /* Adjust z-index for other elements if needed */
+        /* .other-elements {
+            z-index: 1;
+        } */
+    </style>
+	<script type="text/javascript" src="E:\Codehers\script.js"></script>
+	<div id="includedContent"></div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#save-note").click(function () {
+                // Get the note content
+                var noteContent = $("#note-input").val();
+
+                // Check if there's content to save
+                if (noteContent.trim() !== "") {
+                    // Create a Blob with the note content
+                    var blob = new Blob([noteContent], { type: "text/plain;charset=utf-8" });
+
+                    // Create a link element
+                    var link = document.createElement("a");
+
+                    // Set the link's attributes
+                    link.href = window.URL.createObjectURL(blob);
+                    link.download = "note.txt";
+
+                    // Append the link to the document
+                    document.body.appendChild(link);
+
+                    // Trigger a click on the link to start the download
+                    link.click();
+
+                    // Remove the link from the document
+                    document.body.removeChild(link);
+                } else {
+                    alert("Please enter some notes before saving.");
+                }
+            });
+        });
+    </script>
+	
+</head>
+<body>
+	
+<!-- NAVIGATION -->
+	<header>
+		<div class="nav" id="nav">
+			<div id="learned-logo">
+			<a href="../index.html"><img src="E:\Codehers\Smart E (1).png" style="width: 120px;"></a></div>
+			<div class="switch-tab" id="switch-tab" onclick="switchTAB()"><img src="../images/icon/menu.png"></div>
+			<ul id="list-switch">
+				<li><a href="jee.html"><img src="E:\Codehers\jee.jpg" class="icon">JEE</a></li>
+				<li><a href="#"><img src="E:\Codehers\comp.jpg" class="icon">Computer Courses</a></li>
+				<li><a href="#data"><img src="E:\Codehers\algo.jpg" class="icon">Data Structures</a></li>
+				<li><a href="#algo"><img src="E:\Codehers\algo.jpg" class="icon">Algorithm</a></li>
+				<li><a href="#projects"><img src="E:\Codehers\project.jpg" class="icon">Projects</a></li>
+			</ul>
+			<div class="search" id="search-switch">
+				<input type="search" placeholder="Search" class="srch"><button id="srchbtn"><img src="E:\Codehers\search.jpg"></button>
+			</div>
+		</div>
+	</header>
+	
+
+<!-- MAIN Heading of Page -->
+	<div class="title">
+		<span>Computer Science Courses<br>on Study Smart</span>
+		<div class="shortdesc">
+			<p>Learn programming languages and concepts to prepare for a career in<br>hardware or software development by adding notes towards every lecture.</p>
+		</div>
+		
+	</div>
+	
+	
+
+<!-- Videos on JAVA Lectures -->
+	<div class="title2" id="java">
+		<span>Start Programming with Java</span>
+		<div class="shortdesc2">
+			<p>Practice and take notes to become a good Java programmer</p>
+		</div>
+	</div>
+	
+	<center>
+		<div class="ccardbox2">
+			<div class="dcard2"><span class="tag" >1/8</span>
+				<div class="fpart2">
+					<img src="E:\Codehers\java.jpg">
+					<iframe src="https://www.youtube.com/embed/IsLyduxZ9sc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					
+					
+					
+				</div>
+			</div>
+			
+				<div class="video-container">
+              <div id="player"></div>
+              <textarea id="note-input" placeholder="Take notes here..."></textarea>
+              <button id="save-note">Save Note</button>
+               </div>
+			
+			
+			<div class="dcard2"><span class="tag" >2/8</span>
+				<div class="fpart2">
+					<img src="E:\Codehers\java.jpg">
+					<iframe src="https://www.youtube.com/embed/U_vuESBFEpE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="dcard2"><span class="tag" >3/8</span>
+				<div class="fpart2">
+					<img src="E:\Codehers\java.jpg">
+					<iframe src="https://www.youtube.com/embed/7i8vbPA37y0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="dcard2"><span class="tag" >4/8</span>
+				<div class="fpart2">
+					<img src="E:\Codehers\java.jpg">
+					<iframe src="https://www.youtube.com/embed/FB47F-QIk3k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="dcard2"><span class="tag" >5/8</span>
+				<div class="fpart2">
+					<img src="E:\Codehers\java.jpg">
+					<iframe src="https://www.youtube.com/embed/8qyVcHJ1Et4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="dcard2"><span class="tag" >6/8</span>
+				<div class="fpart2">
+					<img src="E:\Codehers\java.jpg">
+					<iframe src="https://www.youtube.com/embed/N53Vf8HGd-0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="dcard2"><span class="tag" >7/8</span>
+				<div class="fpart2">
+					<img src="E:\Codehers\java.jpg">
+					<iframe src="https://www.youtube.com/embed/slz2Vc904Qg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="dcard2"><span class="tag" >8/8</span>
+				<div class="fpart2">
+					<img src="E:\Codehers\java.jpg">
+					<iframe src="https://www.youtube.com/embed/Q0NVRQP1Z5g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</center>
+	<br><br>
+	<div class="click-me">
+		<a href="https://www.youtube.com/watch?v=IsLyduxZ9sc&list=PLX9Zi6XTqOKQ7TdRz0QynGIKuMV9Q2H8E" target="_blank">Click Here to Watch full playlist</a>
+	</div>
+
+<!-- Videos on C++ Lectures -->
+
+	<div class="title2" id="c++">
+		<span>Start Programming with C++</span>
+		<div class="shortdesc2">
+			<p>Practice and take notes to become a good C++ programmer</p>
+		</div>
+	</div>
+	<center>
+		<div class="ccardbox2">
+			<div class="dcard2"><span class="tag" >1/8</span>
+				<div class="fpart2"><img src="E:\Codehers\cpp.jpg">
+					<iframe src="https://www.youtube.com/embed/Iuo9PpGE04Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="dcard2"><span class="tag" >2/8</span>
+				<div class="fpart2"><img src="E:\Codehers\cpp.jpg">
+					<iframe src="https://www.youtube.com/embed/52dHKRD7cdg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="dcard2"><span class="tag" >3/8</span>
+				<div class="fpart2"><img src="E:\Codehers\cpp.jpg">
+					<iframe src="https://www.youtube.com/embed/Iuo9PpGE04Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="dcard2"><span class="tag" >4/8</span>
+				<div class="fpart2"><img src="E:\Codehers\cpp.jpg">
+					<iframe src="https://www.youtube.com/embed/Iuo9PpGE04Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+		
+			<div class="dcard2"><span class="tag" >5/8</span>
+				<div class="fpart2"><img src="E:\Codehers\cpp.jpg">
+					<iframe src="https://www.youtube.com/embed/Iuo9PpGE04Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="dcard2"><span class="tag" >6/8</span>
+				<div class="fpart2"><img src="E:\Codehers\cpp.jpg">
+					<iframe src="https://www.youtube.com/embed/Iuo9PpGE04Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="dcard2"><span class="tag" >7/8</span>
+				<div class="fpart2"><img src="E:\Codehers\cpp.jpg">
+					<iframe src="https://www.youtube.com/embed/Iuo9PpGE04Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="dcard2"><span class="tag" >8/8</span>
+				<div class="fpart2"><img src="E:\Codehers\cpp.jpg">
+					<iframe src="https://www.youtube.com/embed/Iuo9PpGE04Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</center>
+<br><br>
+	<div class="click-me">
+		<a href="https://www.youtube.com/watch?v=Iuo9PpGE04Y&feature=youtu.be" target="_blank">Click Here to Watch full playlist</a>
+	</div>
+
+<!-- Videos on PYTHON Lectures -->
+
+	<div class="title2" id="python">
+		<span>Start Programming with Python</span>
+		<div class="shortdesc2">
+			<p>Practice and take notes to become a good Python programmer</p>
+		</div>
+	</div>
+	<center>
+		<div class="ccardbox2">
+			<div class="dcard2"><span class="tag" >1/8</span>
+				<div class="fpart2"><img src="E:\Codehers\python.jpg">
+					<iframe src="https://www.youtube.com/embed/QXeEoD0pB3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="dcard2"><span class="tag" >2/8</span>
+				<div class="fpart2"><img src="E:\Codehers\python.jpg">
+					<iframe src="https://www.youtube.com/embed/QXeEoD0pB3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="dcard2"><span class="tag" >3/8</span>
+				<div class="fpart2"><img src="E:\Codehers\python.jpg">
+					<iframe src="https://www.youtube.com/embed/QXeEoD0pB3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="dcard2"><span class="tag" >4/8</span>
+				<div class="fpart2"><img src="E:\Codehers\python.jpg">
+					<iframe src="https://www.youtube.com/embed/QXeEoD0pB3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+		
+			<div class="dcard2"><span class="tag" >5/8</span>
+				<div class="fpart2"><img src="E:\Codehers\python.jpg">
+					<iframe src="https://www.youtube.com/embed/QXeEoD0pB3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="dcard2"><span class="tag" >6/8</span>
+				<div class="fpart2"><img src="E:\Codehers\python.jpg">
+					<iframe src="https://www.youtube.com/embed/QXeEoD0pB3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="dcard2"><span class="tag" >7/8</span>
+				<div class="fpart2"><img src="E:\Codehers\python.jpg">
+					<iframe src="https://www.youtube.com/embed/QXeEoD0pB3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="dcard2"><span class="tag" >8/8</span>
+				<div class="fpart2"><img src="E:\Codehers\python.jpg">
+					<iframe src="https://www.youtube.com/embed/QXeEoD0pB3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</center>
+
+<br><br>
+	<div class="click-me">
+		<a href="https://youtu.be/QXeEoD0pB3E" target="_blank">Click Here to Watch full playlist</a>
+	</div>
+
+
+<br><br><br><br><br>
+
+<!-- FOOTER
+<footer>
+	<div class="footer-container">
+		<div class="left-col">
+			<img src="../images/icon/logo - Copy.png" style="width: 200px;">
+			<div class="logo"></div>
+			<div class="social-media">
+				<a href="#"><img src="../images/icon\fb.png"></a>
+				<a href="#"><img src="../images/icon\insta.png"></a>
+				<a href="#"><img src="../images/icon\tt.png"></a>
+				<a href="#"><img src="../images/icon\ytube.png"></a>
+				<a href="#"><img src="../images/icon\linkedin.png"></a>
+			</div><br><br>
+			<p class="rights-text">Copyright © 2021 Created By Roshan Kumar, Abhishek Dulat All Rights Reserved.</p>
+			<br><p><img src="../images/icon/location.png"> Lovely Professional University<br>Phagwara, Punjab-144401</p><br>
+			<p><img src="../images/icon/phone.png"> +91-1234-567-890<br><img src="../images/icon/mail.png">&nbsp; learnedonline9419@gmail.com</p>
+		</div>
+		<div class="right-col">
+			<h1 style="color: #fff">Our Newsletter</h1>
+			<div class="border"></div><br>
+			<p>Enter Your Email to get our News and updates.</p>
+			<form class="newsletter-form">
+				<input class="txtb" type="email" placeholder="Enter Your Email">
+				<input class="btn" type="submit" value="Submit">
+			</form>
+		</div>
+	</div>
+</footer> -->
+
+</body>
+</html>
